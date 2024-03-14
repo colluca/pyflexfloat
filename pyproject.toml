@@ -1,0 +1,19 @@
+[build-system]
+requires = [
+    "setuptools>=60",
+    "setuptools-scm>=8.0",
+    "cmake_build_extension==0.5.2.dev15",
+    "cffi"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyflexfloat"
+dynamic = ["version", "dependencies"]
+description = "Python wrapper for FlexFloat library"
+readme = "README.md"
+authors = [{name = "Luca Colagrande", email = "luca.colagrande3@gmail.com"}]
+license = {file = "LICENSE"}
+requires-python = ">=3.9"
+
+[tool.setuptools_scm]
