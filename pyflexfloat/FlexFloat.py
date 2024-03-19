@@ -80,7 +80,7 @@ class FlexFloat():
             lib.ff_init(self.ptr, desc[0])
 
     def __str__(self):
-        return str(lib.ff_get_double(self.ptr))
+        return str(float(self))
 
     def _uniformize(self, other):
         """Ensures that `self` and `other` have compatible types.
@@ -192,6 +192,9 @@ class FlexFloat():
 
     def __abs__(self):
         return -self if self < 0 else self
+
+    def __float__(self):
+        return lib.ff_get_double(self.ptr)
 
     def sqrt(self):
         result = FlexFloat(self.desc)

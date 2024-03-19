@@ -1,25 +1,20 @@
 ## PyFlexFloat
 
-A Python wrapper around OPRECOMP's [FlexFloat](https://github.com/oprecomp/flexfloat) library.
+A Python wrapper around OPRECOMP's [FlexFloat](https://github.com/oprecomp/flexfloat) library, enabling arbitrary precision floating-point arithmetic emulation in Python.
 
 ## Installation
 
-Clone the repository:
-`
-git clone https://github.com/colluca/pyflexfloat.git
-`
+Simply install via pip:
+```
+pip install pyflexfloat
+```
 
-Enter the local repository folder:
-`
-cd pyflexfloat
-`
+For developers, you can create an editable installation, to test your changes to the source code:
+```
+pip install -e .
+```
 
-Install in your active Python environment:
-`
-pip install .
-`
-
-Test installation:
-`
+Test the installation:
+```
 ./test/test.py
-`
+```

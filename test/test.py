@@ -69,6 +69,7 @@ if __name__ == '__main__':
 
     # Test FlexFloat initialization from bytes
     print('= FlexFloat(..., bytes) =')
+    a = FlexFloat('e5m2', 3.14)
     b = FlexFloat('e5m2', a.bits().to_bytes(1, 'big'))
     print(f'bits: {b.bitstring()}')
     print(f'hex: {hex(b.bits())}')
@@ -86,3 +87,13 @@ if __name__ == '__main__':
     print(f'a: {a}')
     print(f'-a: {-a}')
     print(f'abs(a): {abs(a)}')
+
+    # Casting
+    print('= Casting =')
+    A = np.random.rand(length).astype(np.float32)
+    B = ff.array(A, 'fp32')
+    C = B.astype(np.float32)
+    D = B.astype(np.float64)
+    E = B.astype(np.float16)
+    F = ff.array(A, 'fp16')
+    print(A, B, C, D, E, F)
