@@ -1,8 +1,7 @@
 [build-system]
 requires = [
-    "setuptools>=60",
+    "setuptools>=65.0",
     "setuptools-scm>=8.0",
-    "cmake_build_extension==0.5.2.dev15",
     "cffi"
 ]
 build-backend = "setuptools.build_meta"

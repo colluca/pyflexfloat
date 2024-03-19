@@ -4,12 +4,11 @@
 #
 # Author: Luca Colagrande <colluca@iis.ee.ethz.ch>
 import setuptools
-import cmake_build_extension
+from setuptools.command.build import build
 import subprocess
 from pathlib import Path
 
-
-class CMakeBuild(setuptools.command.build.build):
+class CMakeBuild(build):
 
 	def run(self):
 		# Required to generate "flexfloat_config.h"
